@@ -8,6 +8,8 @@ Cheat sheet to talk through the project. One 30-second pitch per module + impact
 
 > *"I built an AI-powered operations console for cross-border e-commerce. It replaces four manual workflows — product selection, copywriting, customer triage, and dashboard monitoring — with one connected Streamlit tool. Every tab feeds the next: rank top products, push one into the copy generator, understand what customers actually ask about, and monitor how the changes perform. Headline numbers: decision time dropped 85%, AI-generated copy lifts orders 130% in A/B tests, customer-inquiry triage went from 10 hours a week to 30 minutes, and we now monitor 100% of products daily. Every LLM call has a deterministic fallback so the demo is interview-proof."*
 
+**Reusability:** *"This tool isn't just a static demo. I designed a thin data source layer so operators can upload their own product, inquiry, or performance CSVs and reuse the same AI workflow. The architecture is connector-ready — Google Sheets / Shopify / Alibaba / CRM integrations slot into a single function (`data_loader.load_from_source`)."*
+
 ---
 
 ## How to demo in 3 minutes

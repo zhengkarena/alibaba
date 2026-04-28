@@ -14,6 +14,7 @@ import pandas as pd
 import streamlit as st
 
 from llm_client import is_live, status
+import data_loader as dl
 from modules.m1_product_rank import (
     WEIGHTS,
     decision_time_savings,
@@ -47,27 +48,75 @@ from modules.m5_monitor import (
     detect_anomalies,
 )
 
-DATA_DIR = Path(__file__).parent / "data"
-PRODUCTS_PATH = DATA_DIR / "products.csv"
-INQUIRIES_PATH = DATA_DIR / "inquiries.csv"
-TIMESERIES_PATH = DATA_DIR / "products_timeseries.csv"
-
 CATEGORIES = ["Electronics", "Apparel", "Home", "Beauty", "Toys", "Sports"]
 
 
 @st.cache_data
-def _load_products() -> pd.DataFrame:
-    return pd.read_csv(PRODUCTS_PATH)
+def _demo_products() -> pd.DataFrame:
+    return dl.load_products()
 
 
 @st.cache_data
-def _load_inquiries() -> pd.DataFrame:
-    return pd.read_csv(INQUIRIES_PATH)
+def _demo_inquiries() -> pd.DataFrame:
+    return dl.load_inquiries()
 
 
 @st.cache_data
-def _load_timeseries() -> pd.DataFrame:
-    return pd.read_csv(TIMESERIES_PATH)
+def _demo_timeseries() -> pd.DataFrame:
+    return dl.load_timeseries()
+
+
+def _resolve(load_fn, demo_fn, uploaded):
+    """Return (df, status_dict).
+
+    status_dict: {'source': 'demo'|'uploaded'|'demo (fallback)', 'rows': int|None, 'missing': list[str]|None}
+    """
+    if uploaded is None:
+        return demo_fn(), {"source": "demo", "rows": None, "missing": None}
+    try:
+        df = load_fn(uploaded)
+        return df, {"source": "uploaded", "rows": len(df), "missing": None}
+    except dl.SchemaError as e:
+        return demo_fn(), {"source": "demo (fallback)", "rows": None, "missing": e.missing}
+
+
+# --- Sidebar: Data Source -----------------------------------------------------
+
+with st.sidebar:
+    st.markdown("### Data Source")
+    mode = st.radio(
+        "Source",
+        options=["Demo data", "Upload CSV files"],
+        index=0,
+        help="Demo data is bundled — the app runs instantly. Upload mode is per-file: any file you don't upload still uses demo data.",
+    )
+
+    up_products = up_inquiries = up_timeseries = None
+    if mode == "Upload CSV files":
+        st.caption("Upload any subset. Missing files fall back to demo.")
+        up_products = st.file_uploader("products.csv", type="csv", key="up_products")
+        up_inquiries = st.file_uploader("inquiries.csv", type="csv", key="up_inquiries")
+        up_timeseries = st.file_uploader("products_timeseries.csv", type="csv", key="up_timeseries")
+
+products, prod_status = _resolve(dl.load_products, _demo_products, up_products)
+inquiries, inq_status = _resolve(dl.load_inquiries, _demo_inquiries, up_inquiries)
+timeseries, ts_status = _resolve(dl.load_timeseries, _demo_timeseries, up_timeseries)
+
+with st.sidebar:
+    st.markdown("**Status**")
+    for label, s in [("products", prod_status), ("inquiries", inq_status), ("timeseries", ts_status)]:
+        if s["missing"]:
+            st.error(f"{label}: schema fail · missing `{', '.join(s['missing'])}` · using demo")
+        elif s["source"] == "uploaded":
+            st.success(f"{label}: uploaded ({s['rows']:,} rows)")
+        else:
+            st.info(f"{label}: demo")
+
+    st.markdown("---")
+    st.caption(
+        "Future connectors (Google Sheets, Shopify, Alibaba export, CRM) plug into "
+        "`data_loader.load_from_source()` — see README."
+    )
 
 
 # --- Page config + hero --------------------------------------------------------
@@ -92,9 +141,9 @@ hero4.metric("Monitoring coverage", "100%", "+80pp",
 mode = "LIVE" if is_live() else "FALLBACK"
 st.caption(
     f"LLM: {mode}  ·  model: {status()['model']}  ·  reason: {status()['reason'] or 'n/a'}  ·  "
-    f"data: {len(_load_products())} products · {len(_load_inquiries()):,} inquiries · "
-    f"{_load_timeseries()['product_id'].nunique()} monitored products × "
-    f"{_load_timeseries()['date'].nunique()} days"
+    f"data: {len(products)} products · {len(inquiries):,} inquiries · "
+    f"{timeseries['product_id'].nunique()} monitored products × "
+    f"{timeseries['date'].nunique()} days"
 )
 
 tab_rank, tab_copy, tab_insight, tab_monitor = st.tabs([
@@ -105,7 +154,6 @@ tab_rank, tab_copy, tab_insight, tab_monitor = st.tabs([
 # --- Tab 1: Product Selection (M1) --------------------------------------------
 
 with tab_rank:
-    products = _load_products()
 
     left, right = st.columns([1, 3], gap="large")
 
@@ -281,7 +329,7 @@ with tab_copy:
 # --- Tab 3: Customer Insight (M3) ---------------------------------------------
 
 with tab_insight:
-    inquiries = _load_inquiries()
+    # `inquiries` is already resolved at module top from sidebar Data Source.
 
     left, right = st.columns([1, 3], gap="large")
 
@@ -368,7 +416,7 @@ with tab_insight:
 # --- Tab 4: Monitoring (M5) ---------------------------------------------------
 
 with tab_monitor:
-    ts = _load_timeseries()
+    ts = timeseries  # resolved at module top from sidebar Data Source.
 
     left, right = st.columns([1, 3], gap="large")
 

@@ -76,6 +76,65 @@ python3 -m modules.m5_monitor           # anomaly table + daily report
 python3 llm_client.py                   # live + fallback round-trip
 ```
 
+## Data sources
+
+The app has a thin **data source layer** (`data_loader.py`) so it can run on either the bundled synthetic data (default) or your own uploaded CSVs — per file, independently.
+
+### Demo mode (default)
+On first launch the sidebar **Data Source** is set to `Demo data` and the app runs immediately on the synthetic CSVs in `data/`. Useful for interviews and first-run.
+
+### Upload mode (per-file optional)
+Switch the sidebar to `Upload CSV files` and upload any subset of the three files. Anything you don't upload still uses demo data, so a partial upload is fine.
+
+### Required columns
+
+Schema validation runs on each uploaded file. If a column is missing, the sidebar shows the exact missing column(s) and the app **falls back to demo data** for that file — it never crashes.
+
+**`products.csv`**
+| Column | Type | Notes |
+|---|---|---|
+| `product_id` | string | Unique. |
+| `product_name` | string | Used as both EN/ZH product name. |
+| `category` | string | Used as both EN/ZH category. |
+| `price` | number | USD. |
+| `impressions` | int | |
+| `clicks` | int | |
+| `inquiries` | int | |
+| `orders` | int | |
+
+**`inquiries.csv`**
+| Column | Type | Notes |
+|---|---|---|
+| `inquiry_id` | string | Unique. |
+| `text` | string | Customer message text. |
+| `language` | string | `en` or `zh`. |
+| `product_id` | string | *Optional.* |
+| `true_theme` | string | *Optional.* If present, the classifier accuracy KPI is shown. |
+
+**`products_timeseries.csv`**
+| Column | Type | Notes |
+|---|---|---|
+| `date` | YYYY-MM-DD | One row per (product_id, date). |
+| `product_id` | string | |
+| `impressions` | int | |
+| `clicks` | int | |
+| `inquiries` | int | |
+| `orders` | int | |
+
+### Adding new connectors (Google Sheets, Shopify, Alibaba export, CRM)
+
+`data_loader.load_from_source(kind, source)` is a stub designed to host future connectors. Each new connector is a single function that returns a DataFrame in the canonical upload schema; the existing normalization and validation in `load_products` / `load_inquiries` / `load_timeseries` then handles the rest. No call sites change.
+
+```python
+# Roadmap shape (not implemented):
+def load_from_source(kind, source):
+    if source.startswith("gsheets:"):
+        return _gsheets_to_df(source.split(":", 1)[1])    # uses gspread
+    if source.startswith("shopify:"):
+        return _shopify_to_df(source.split(":", 1)[1])    # uses Admin API
+    ...
+```
+
 ## Tech stack
 
 - Python 3.11+
