@@ -10,6 +10,23 @@ Cheat sheet to talk through the project. One 30-second pitch per module + impact
 
 ---
 
+## How to demo in 3 minutes
+
+Run `streamlit run app.py` before the call. Then walk through it in this order — about 30–45 seconds per step.
+
+| # | What to do | What to say |
+|---|---|---|
+| 1 | **Open the hero.** Point at the four metric cards (decision time, CTR uplift, triage time, monitoring coverage). | *"This is the headline impact. Every number maps to a tab below."* |
+| 2 | **Product Selection tab.** Show the top-20 ranked table with the *Why* column. | *"500 products scored on CTR, inquiry rate, conversion, and volume — within-category percentiles so categories compare fairly. Each pick is auditable."* |
+| 3 | **Click `Send to Copy Generator`** on the #1 product. Switch to the Copy Generator tab — name, category, and price are pre-filled. | *"Connected workflow: pick a product, push it to the next tool with one click."* |
+| 4 | **Click `Generate AI Copy`.** Show three styles in EN, switch to 中文 and regenerate. Pick a winner. Scroll to the A/B table. | *"Three styles, two languages, deterministic fallback. The A/B simulator shows projected lift on a real baseline — CTR up 40%, conversion up 65%, orders compound to +130%."* |
+| 5 | **Customer Insight tab.** Read the auto-generated *Key Insights* bullets, then point at the *Action plan* table and the *Expected impact* metrics. | *"8,000 inquiries classified into four ops themes, each mapped to a concrete PDP fix. Triage time drops from 10 hours a week to 30 minutes; high-match inquiries from 35% to 61%."* |
+| 6 | **Monitoring tab.** Point at the red alert banner, the trend chart, the flagged-products table (P0361 at the top with z=-5.12), then expand the auto-generated daily report. | *"Z-score against a 14-day rolling baseline. Critical drops in red, warnings in yellow. The markdown report is ready to paste into Slack — operators went from 2 hours of morning checks to 30 seconds with full coverage."* |
+
+If the interviewer asks "is this real data?" — *"Synthetic with seeded distributions and ground-truth labels in the eval set, so I can measure classifier accuracy live in the UI. The pipeline is what's real."*
+
+---
+
 ## Module 1 — Product Selection Optimizer
 
 **Business problem:** Operations teams pick which products to push (ad budget, homepage slots) out of hundreds of SKUs. Manually it takes ~2 hours per session, and gut-pick hit rate is around 40%.

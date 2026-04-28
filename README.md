@@ -84,7 +84,7 @@ python3 llm_client.py                   # live + fallback round-trip
 - OpenAI Python SDK (`gpt-4o-mini`)
 - python-dotenv (config)
 
-No Docker, no DB, no microservices. Reproducible synthetic data, in-memory caching, ~1500 lines of code total.
+No Docker, no DB, no microservices. Reproducible synthetic data, in-memory caching, under 2,000 lines of code total.
 
 ## Interview talking points
 
