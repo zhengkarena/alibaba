@@ -150,7 +150,7 @@ with tab_rank:
             disp["conversion_rate"] = (disp["conversion_rate"] * 100).round(2).astype(str) + "%"
             disp["score"] = disp["score"].round(3).astype(str)
             disp.columns = ["ID", "Name", "Category", "Price", "CTR", "Conv", "Score", "Why"]
-            st.dataframe(disp, width="stretch", hide_index=True)
+            st.dataframe(disp, use_container_width=True, hide_index=True)
 
             st.markdown("**Score distribution (top N)**")
             chart_df = top[["product_id", "score"]].set_index("product_id")
@@ -211,7 +211,7 @@ with tab_copy:
             format_func=lambda x: "English" if x == "en" else "中文",
         )
 
-        if st.button("Generate AI Copy", type="primary", width="stretch"):
+        if st.button("Generate AI Copy", type="primary", use_container_width=True):
             product = {
                 "name_en": name, "name_zh": name,
                 "category_en": category, "category_zh": category,
@@ -266,7 +266,7 @@ with tab_copy:
         baseline_ctr=baseline_ctr_pct / 100,
         baseline_conv=baseline_conv_pct / 100,
     )
-    st.dataframe(df_ab, width="stretch", hide_index=True)
+    st.dataframe(df_ab, use_container_width=True, hide_index=True)
     st.caption(
         f"Variant uplift coefficients: CTR ×{AB_UPLIFT['ctr']:.2f}, conversion ×{AB_UPLIFT['conv']:.2f} "
         f"(measured from prior A/B tests on AI-generated vs. template copy)."
@@ -303,7 +303,7 @@ with tab_insight:
         st.markdown("**Theme schema**")
         st.code("\n".join(THEMES), language=None)
 
-        run_clicked = st.button("Classify Inquiries", type="primary", width="stretch")
+        run_clicked = st.button("Classify Inquiries", type="primary", use_container_width=True)
 
     with right:
         # Demo Mode: auto-run on first visit so the panel is never empty.
@@ -334,14 +334,14 @@ with tab_insight:
         with table_col:
             st.dataframe(
                 dist.rename(columns={"theme": "Theme", "count": "Count", "share": "Share %"}),
-                width="stretch", hide_index=True,
+                use_container_width=True, hide_index=True,
             )
 
         st.markdown("**Action plan**")
         action_df = dist.assign(action=dist["theme"].map(ACTIONS_BY_THEME)).rename(columns={
             "theme": "Theme", "count": "Count", "share": "Share %", "action": "Recommended action",
         })
-        st.dataframe(action_df, width="stretch", hide_index=True)
+        st.dataframe(action_df, use_container_width=True, hide_index=True)
 
         st.markdown("**Expected impact** (after acting on the plan above)")
         i1, i2 = st.columns(2)
@@ -385,7 +385,7 @@ with tab_monitor:
         )
         baseline_days = st.slider("Baseline window (days)", 7, 21, 14)
         z_thresh = st.slider("Alert threshold (z-score)", 1.5, 4.0, 2.0, step=0.1)
-        run_check = st.button("Run Daily Check", type="primary", width="stretch")
+        run_check = st.button("Run Daily Check", type="primary", use_container_width=True)
 
     with right:
         if run_check or "m5_result" not in st.session_state:
@@ -443,7 +443,7 @@ with tab_monitor:
             display["z_score"] = display["z_score"].round(2).astype(str)
             display = display[["product_id", "metric", "today", "baseline", "delta_pct", "z_score", "severity"]]
             display.columns = ["Product", "Metric", "Today", "Baseline", "Δ vs baseline", "z-score", "Severity"]
-            st.dataframe(display, width="stretch", hide_index=True)
+            st.dataframe(display, use_container_width=True, hide_index=True)
 
         with st.expander("Auto-generated daily report (markdown — paste into Slack / email)"):
             report = daily_report_markdown(anomalies, kpis, metric=sel_metric)
