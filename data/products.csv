@@ -1,0 +1,501 @@
+product_id,category_en,category_zh,name_en,name_zh,price,impressions,clicks,inquiries,orders
+P0000,Electronics,电子产品,Wireless Earbuds Model 000,无线耳机 型号000,10.68,28295,815,77,15
+P0001,Apparel,服装,Wool Sweater Model 001,羊毛毛衣 型号001,35.66,5657,122,4,0
+P0002,Home,家居,Storage Basket Model 002,收纳篮 型号002,37.56,19253,425,53,2
+P0003,Beauty,美妆,Vitamin C Serum Model 003,维C精华液 型号003,12.53,5857,145,25,1
+P0004,Toys,玩具,Plush Bear Model 004,毛绒熊 型号004,29.34,26341,490,70,6
+P0005,Sports,运动,Cycling Helmet Model 005,骑行头盔 型号005,12.27,35181,272,16,3
+P0006,Electronics,电子产品,Smart Watch Model 006,智能手表 型号006,8.84,4301,48,4,0
+P0007,Apparel,服装,Running Shorts Model 007,跑步短裤 型号007,14.45,9292,138,4,0
+P0008,Home,家居,Memory Foam Pillow Model 008,记忆棉枕头 型号008,23.02,2471,21,0,0
+P0009,Beauty,美妆,Matte Lipstick Model 009,哑光口红 型号009,11.62,10878,121,12,2
+P0010,Toys,玩具,RC Car Model 010,遥控车 型号010,29.55,13654,547,38,9
+P0011,Sports,运动,Cycling Helmet Model 011,骑行头盔 型号011,9.48,7046,79,4,0
+P0012,Electronics,电子产品,Smart Watch Model 012,智能手表 型号012,252.42,20219,221,2,0
+P0013,Apparel,服装,Running Shorts Model 013,跑步短裤 型号013,21.61,4742,36,2,0
+P0014,Home,家居,Memory Foam Pillow Model 014,记忆棉枕头 型号014,13.73,112248,1339,161,21
+P0015,Beauty,美妆,Vitamin C Serum Model 015,维C精华液 型号015,17.05,3922,37,3,0
+P0016,Toys,玩具,RC Car Model 016,遥控车 型号016,34.57,62053,1224,25,1
+P0017,Sports,运动,Dumbbell Set Model 017,哑铃套装 型号017,75.51,5460,135,8,1
+P0018,Electronics,电子产品,Smart Watch Model 018,智能手表 型号018,12.5,3948,45,4,0
+P0019,Apparel,服装,Running Shorts Model 019,跑步短裤 型号019,71.52,11447,145,10,0
+P0020,Home,家居,LED Desk Lamp Model 020,LED 台灯 型号020,19.49,3091,41,5,0
+P0021,Beauty,美妆,Nail Polish Kit Model 021,指甲油套装 型号021,143.86,7868,91,10,0
+P0022,Toys,玩具,Educational Robot Model 022,益智机器人 型号022,18.27,18798,803,25,3
+P0023,Sports,运动,Yoga Mat Model 023,瑜伽垫 型号023,19.82,16851,229,26,4
+P0024,Electronics,电子产品,Bluetooth Speaker Model 024,蓝牙音箱 型号024,233.05,108355,4283,608,141
+P0025,Apparel,服装,Cotton T-Shirt Model 025,纯棉T恤 型号025,35.29,4400,62,6,0
+P0026,Home,家居,Storage Basket Model 026,收纳篮 型号026,28.25,17961,268,2,0
+P0027,Beauty,美妆,Matte Lipstick Model 027,哑光口红 型号027,18.77,49022,1180,242,42
+P0028,Toys,玩具,Building Blocks Model 028,积木 型号028,54.15,4112,109,6,1
+P0029,Sports,运动,Dumbbell Set Model 029,哑铃套装 型号029,16.21,60550,1499,73,6
+P0030,Electronics,电子产品,Wireless Earbuds Model 030,无线耳机 型号030,3.92,18112,337,60,7
+P0031,Apparel,服装,Running Shorts Model 031,跑步短裤 型号031,48.29,7548,204,31,2
+P0032,Home,家居,LED Desk Lamp Model 032,LED 台灯 型号032,10.52,11789,445,20,2
+P0033,Beauty,美妆,Nail Polish Kit Model 033,指甲油套装 型号033,38.22,136988,2225,26,8
+P0034,Toys,玩具,Plush Bear Model 034,毛绒熊 型号034,34.87,22565,466,37,4
+P0035,Sports,运动,Resistance Bands Model 035,弹力带 型号035,13.96,11163,221,28,5
+P0036,Electronics,电子产品,USB-C Hub Model 036,USB-C 扩展坞 型号036,3.79,6780,177,9,1
+P0037,Apparel,服装,Denim Jacket Model 037,牛仔外套 型号037,26.41,5782,77,1,0
+P0038,Home,家居,LED Desk Lamp Model 038,LED 台灯 型号038,22.09,2141,61,4,0
+P0039,Beauty,美妆,Vitamin C Serum Model 039,维C精华液 型号039,70.56,9482,81,10,0
+P0040,Toys,玩具,Educational Robot Model 040,益智机器人 型号040,27.89,39192,462,46,1
+P0041,Sports,运动,Yoga Mat Model 041,瑜伽垫 型号041,19.4,92709,2901,122,18
+P0042,Electronics,电子产品,Wireless Earbuds Model 042,无线耳机 型号042,24.66,179453,3611,631,62
+P0043,Apparel,服装,Running Shorts Model 043,跑步短裤 型号043,41.78,39548,855,63,2
+P0044,Home,家居,Ceramic Mug Set Model 044,陶瓷杯套装 型号044,50.21,6506,55,16,0
+P0045,Beauty,美妆,Matte Lipstick Model 045,哑光口红 型号045,46.18,18857,474,16,1
+P0046,Toys,玩具,Educational Robot Model 046,益智机器人 型号046,78.57,15237,312,77,10
+P0047,Sports,运动,Dumbbell Set Model 047,哑铃套装 型号047,61.45,1218,14,0,0
+P0048,Electronics,电子产品,Power Bank Model 048,充电宝 型号048,41.68,19634,466,49,4
+P0049,Apparel,服装,Running Shorts Model 049,跑步短裤 型号049,16.26,5492,95,12,2
+P0050,Home,家居,Ceramic Mug Set Model 050,陶瓷杯套装 型号050,7.7,12481,256,14,3
+P0051,Beauty,美妆,Matte Lipstick Model 051,哑光口红 型号051,9.73,9958,104,18,3
+P0052,Toys,玩具,Educational Robot Model 052,益智机器人 型号052,6.54,3710,54,2,0
+P0053,Sports,运动,Cycling Helmet Model 053,骑行头盔 型号053,14.74,22951,604,62,8
+P0054,Electronics,电子产品,Power Bank Model 054,充电宝 型号054,43.43,17011,225,44,3
+P0055,Apparel,服装,Wool Sweater Model 055,羊毛毛衣 型号055,72.97,4719,25,5,0
+P0056,Home,家居,Storage Basket Model 056,收纳篮 型号056,37.32,2997,76,20,4
+P0057,Beauty,美妆,Vitamin C Serum Model 057,维C精华液 型号057,27.98,9041,409,39,5
+P0058,Toys,玩具,RC Car Model 058,遥控车 型号058,6.34,13127,150,14,4
+P0059,Sports,运动,Resistance Bands Model 059,弹力带 型号059,30.51,6542,60,5,0
+P0060,Electronics,电子产品,USB-C Hub Model 060,USB-C 扩展坞 型号060,16.17,8643,122,18,2
+P0061,Apparel,服装,Yoga Pants Model 061,瑜伽裤 型号061,12.66,6109,34,1,0
+P0062,Home,家居,Bath Towel Model 062,浴巾 型号062,11.84,23354,376,42,7
+P0063,Beauty,美妆,Face Mask Pack Model 063,面膜组合 型号063,42.46,9405,101,13,0
+P0064,Toys,玩具,RC Car Model 064,遥控车 型号064,10.02,20906,387,44,12
+P0065,Sports,运动,Yoga Mat Model 065,瑜伽垫 型号065,54.67,43814,473,5,1
+P0066,Electronics,电子产品,Smart Watch Model 066,智能手表 型号066,10.89,103647,4554,653,92
+P0067,Apparel,服装,Yoga Pants Model 067,瑜伽裤 型号067,40.83,18784,138,16,4
+P0068,Home,家居,Memory Foam Pillow Model 068,记忆棉枕头 型号068,28.85,4476,98,8,2
+P0069,Beauty,美妆,Vitamin C Serum Model 069,维C精华液 型号069,25.42,10906,114,11,1
+P0070,Toys,玩具,Building Blocks Model 070,积木 型号070,55.74,13889,163,5,1
+P0071,Sports,运动,Dumbbell Set Model 071,哑铃套装 型号071,29.19,10915,147,17,1
+P0072,Electronics,电子产品,Smart Watch Model 072,智能手表 型号072,77.5,4179,26,0,0
+P0073,Apparel,服装,Cotton T-Shirt Model 073,纯棉T恤 型号073,9.95,9137,112,3,0
+P0074,Home,家居,Bath Towel Model 074,浴巾 型号074,27.24,19254,1698,204,17
+P0075,Beauty,美妆,Nail Polish Kit Model 075,指甲油套装 型号075,24.81,18705,416,15,1
+P0076,Toys,玩具,Building Blocks Model 076,积木 型号076,23.64,17656,192,39,4
+P0077,Sports,运动,Resistance Bands Model 077,弹力带 型号077,29.38,34463,355,10,1
+P0078,Electronics,电子产品,Bluetooth Speaker Model 078,蓝牙音箱 型号078,17.7,13885,213,41,1
+P0079,Apparel,服装,Running Shorts Model 079,跑步短裤 型号079,87.41,7170,361,25,1
+P0080,Home,家居,Bath Towel Model 080,浴巾 型号080,61.93,56179,1317,264,37
+P0081,Beauty,美妆,Face Mask Pack Model 081,面膜组合 型号081,21.42,20207,323,26,6
+P0082,Toys,玩具,Building Blocks Model 082,积木 型号082,52.05,31760,635,74,16
+P0083,Sports,运动,Dumbbell Set Model 083,哑铃套装 型号083,1.32,2384,53,7,0
+P0084,Electronics,电子产品,USB-C Hub Model 084,USB-C 扩展坞 型号084,27.24,4903,83,7,1
+P0085,Apparel,服装,Denim Jacket Model 085,牛仔外套 型号085,29.33,24755,270,10,2
+P0086,Home,家居,LED Desk Lamp Model 086,LED 台灯 型号086,33.1,25134,224,21,1
+P0087,Beauty,美妆,Face Mask Pack Model 087,面膜组合 型号087,70.23,11971,257,34,4
+P0088,Toys,玩具,Plush Bear Model 088,毛绒熊 型号088,32.21,26110,389,70,8
+P0089,Sports,运动,Yoga Mat Model 089,瑜伽垫 型号089,25.58,10159,154,18,3
+P0090,Electronics,电子产品,Power Bank Model 090,充电宝 型号090,24.44,38007,1238,110,15
+P0091,Apparel,服装,Denim Jacket Model 091,牛仔外套 型号091,42.18,5142,150,23,2
+P0092,Home,家居,LED Desk Lamp Model 092,LED 台灯 型号092,20.84,14907,911,21,2
+P0093,Beauty,美妆,Face Mask Pack Model 093,面膜组合 型号093,17.03,41449,540,40,6
+P0094,Toys,玩具,RC Car Model 094,遥控车 型号094,11.82,16760,583,117,16
+P0095,Sports,运动,Football Model 095,足球 型号095,7.14,25674,402,18,1
+P0096,Electronics,电子产品,Smart Watch Model 096,智能手表 型号096,60.59,24688,599,62,3
+P0097,Apparel,服装,Denim Jacket Model 097,牛仔外套 型号097,19.74,4220,67,4,0
+P0098,Home,家居,LED Desk Lamp Model 098,LED 台灯 型号098,20.31,11112,174,41,3
+P0099,Beauty,美妆,Hair Dryer Model 099,电吹风 型号099,21.5,48457,899,79,1
+P0100,Toys,玩具,Educational Robot Model 100,益智机器人 型号100,35.82,9097,272,36,2
+P0101,Sports,运动,Yoga Mat Model 101,瑜伽垫 型号101,79.71,1151,10,0,0
+P0102,Electronics,电子产品,Bluetooth Speaker Model 102,蓝牙音箱 型号102,18.34,4233,29,2,0
+P0103,Apparel,服装,Cotton T-Shirt Model 103,纯棉T恤 型号103,8.53,31403,378,65,10
+P0104,Home,家居,Bath Towel Model 104,浴巾 型号104,19.98,28285,1338,385,22
+P0105,Beauty,美妆,Hair Dryer Model 105,电吹风 型号105,22.6,6970,89,2,0
+P0106,Toys,玩具,Puzzle 1000pc Model 106,1000片拼图 型号106,8.15,2185,12,0,0
+P0107,Sports,运动,Yoga Mat Model 107,瑜伽垫 型号107,43.95,7505,178,28,4
+P0108,Electronics,电子产品,Power Bank Model 108,充电宝 型号108,40.23,63062,2149,90,19
+P0109,Apparel,服装,Denim Jacket Model 109,牛仔外套 型号109,7.05,35147,1350,72,9
+P0110,Home,家居,Ceramic Mug Set Model 110,陶瓷杯套装 型号110,26.52,29607,426,42,5
+P0111,Beauty,美妆,Face Mask Pack Model 111,面膜组合 型号111,18.17,19400,255,15,2
+P0112,Toys,玩具,Plush Bear Model 112,毛绒熊 型号112,25.75,17161,159,11,1
+P0113,Sports,运动,Resistance Bands Model 113,弹力带 型号113,48.25,2763,35,1,0
+P0114,Electronics,电子产品,USB-C Hub Model 114,USB-C 扩展坞 型号114,2.66,9437,94,12,3
+P0115,Apparel,服装,Running Shorts Model 115,跑步短裤 型号115,63.58,6244,84,6,0
+P0116,Home,家居,Ceramic Mug Set Model 116,陶瓷杯套装 型号116,10.38,32097,661,67,26
+P0117,Beauty,美妆,Matte Lipstick Model 117,哑光口红 型号117,34.85,7889,84,25,2
+P0118,Toys,玩具,Educational Robot Model 118,益智机器人 型号118,43.71,90486,2056,146,22
+P0119,Sports,运动,Yoga Mat Model 119,瑜伽垫 型号119,18.11,19476,199,30,8
+P0120,Electronics,电子产品,USB-C Hub Model 120,USB-C 扩展坞 型号120,38.28,15950,332,99,10
+P0121,Apparel,服装,Wool Sweater Model 121,羊毛毛衣 型号121,10.29,18702,212,12,1
+P0122,Home,家居,LED Desk Lamp Model 122,LED 台灯 型号122,18.93,10893,153,7,0
+P0123,Beauty,美妆,Matte Lipstick Model 123,哑光口红 型号123,7.0,47142,1681,57,7
+P0124,Toys,玩具,Puzzle 1000pc Model 124,1000片拼图 型号124,28.36,5369,145,18,1
+P0125,Sports,运动,Dumbbell Set Model 125,哑铃套装 型号125,22.95,8604,35,1,0
+P0126,Electronics,电子产品,Bluetooth Speaker Model 126,蓝牙音箱 型号126,82.53,9832,131,9,1
+P0127,Apparel,服装,Yoga Pants Model 127,瑜伽裤 型号127,102.34,19097,556,24,4
+P0128,Home,家居,Ceramic Mug Set Model 128,陶瓷杯套装 型号128,26.78,41152,735,78,20
+P0129,Beauty,美妆,Face Mask Pack Model 129,面膜组合 型号129,31.94,29074,349,48,4
+P0130,Toys,玩具,Building Blocks Model 130,积木 型号130,10.14,18449,186,28,7
+P0131,Sports,运动,Yoga Mat Model 131,瑜伽垫 型号131,4.55,12795,625,52,1
+P0132,Electronics,电子产品,Smart Watch Model 132,智能手表 型号132,19.07,1930,18,1,0
+P0133,Apparel,服装,Running Shorts Model 133,跑步短裤 型号133,31.42,35649,358,77,4
+P0134,Home,家居,LED Desk Lamp Model 134,LED 台灯 型号134,22.56,52252,835,10,0
+P0135,Beauty,美妆,Hair Dryer Model 135,电吹风 型号135,8.16,7126,89,12,2
+P0136,Toys,玩具,Educational Robot Model 136,益智机器人 型号136,9.67,15710,407,8,1
+P0137,Sports,运动,Dumbbell Set Model 137,哑铃套装 型号137,55.87,1459,31,4,0
+P0138,Electronics,电子产品,Wireless Earbuds Model 138,无线耳机 型号138,17.04,3339,29,2,0
+P0139,Apparel,服装,Cotton T-Shirt Model 139,纯棉T恤 型号139,23.48,41468,1404,24,3
+P0140,Home,家居,Storage Basket Model 140,收纳篮 型号140,23.71,14452,185,33,2
+P0141,Beauty,美妆,Matte Lipstick Model 141,哑光口红 型号141,62.83,16194,513,5,0
+P0142,Toys,玩具,Building Blocks Model 142,积木 型号142,58.42,2286,66,7,0
+P0143,Sports,运动,Cycling Helmet Model 143,骑行头盔 型号143,22.3,43025,708,26,3
+P0144,Electronics,电子产品,Bluetooth Speaker Model 144,蓝牙音箱 型号144,44.77,15193,902,20,1
+P0145,Apparel,服装,Yoga Pants Model 145,瑜伽裤 型号145,14.03,12218,98,9,2
+P0146,Home,家居,Ceramic Mug Set Model 146,陶瓷杯套装 型号146,10.8,7802,259,15,1
+P0147,Beauty,美妆,Matte Lipstick Model 147,哑光口红 型号147,21.67,3354,46,1,0
+P0148,Toys,玩具,Building Blocks Model 148,积木 型号148,3.82,16929,789,38,2
+P0149,Sports,运动,Cycling Helmet Model 149,骑行头盔 型号149,10.91,15162,203,15,0
+P0150,Electronics,电子产品,Wireless Earbuds Model 150,无线耳机 型号150,11.56,7869,146,13,0
+P0151,Apparel,服装,Cotton T-Shirt Model 151,纯棉T恤 型号151,21.08,5885,111,6,1
+P0152,Home,家居,Memory Foam Pillow Model 152,记忆棉枕头 型号152,50.11,6157,81,3,1
+P0153,Beauty,美妆,Matte Lipstick Model 153,哑光口红 型号153,9.57,6138,80,2,0
+P0154,Toys,玩具,Educational Robot Model 154,益智机器人 型号154,17.1,14357,135,28,2
+P0155,Sports,运动,Football Model 155,足球 型号155,26.48,1168,12,1,0
+P0156,Electronics,电子产品,Power Bank Model 156,充电宝 型号156,19.29,2096,32,2,0
+P0157,Apparel,服装,Running Shorts Model 157,跑步短裤 型号157,26.41,1956,44,3,0
+P0158,Home,家居,Storage Basket Model 158,收纳篮 型号158,41.74,33949,778,46,7
+P0159,Beauty,美妆,Hair Dryer Model 159,电吹风 型号159,85.37,5562,89,15,2
+P0160,Toys,玩具,Puzzle 1000pc Model 160,1000片拼图 型号160,11.93,7425,134,26,3
+P0161,Sports,运动,Cycling Helmet Model 161,骑行头盔 型号161,14.68,16836,260,39,12
+P0162,Electronics,电子产品,Power Bank Model 162,充电宝 型号162,75.95,37201,774,64,10
+P0163,Apparel,服装,Running Shorts Model 163,跑步短裤 型号163,9.44,4607,33,3,0
+P0164,Home,家居,Memory Foam Pillow Model 164,记忆棉枕头 型号164,30.37,4612,91,1,0
+P0165,Beauty,美妆,Hair Dryer Model 165,电吹风 型号165,7.09,21015,302,8,1
+P0166,Toys,玩具,Educational Robot Model 166,益智机器人 型号166,16.85,20649,251,58,18
+P0167,Sports,运动,Cycling Helmet Model 167,骑行头盔 型号167,55.79,1955,61,5,1
+P0168,Electronics,电子产品,Bluetooth Speaker Model 168,蓝牙音箱 型号168,69.05,3463,139,13,0
+P0169,Apparel,服装,Yoga Pants Model 169,瑜伽裤 型号169,18.11,2202,27,0,0
+P0170,Home,家居,Memory Foam Pillow Model 170,记忆棉枕头 型号170,50.73,4013,62,3,0
+P0171,Beauty,美妆,Nail Polish Kit Model 171,指甲油套装 型号171,22.85,8686,232,16,1
+P0172,Toys,玩具,RC Car Model 172,遥控车 型号172,36.27,15845,215,22,3
+P0173,Sports,运动,Dumbbell Set Model 173,哑铃套装 型号173,33.53,23047,465,66,4
+P0174,Electronics,电子产品,Smart Watch Model 174,智能手表 型号174,34.72,17186,153,32,3
+P0175,Apparel,服装,Running Shorts Model 175,跑步短裤 型号175,24.33,65527,1277,95,11
+P0176,Home,家居,Storage Basket Model 176,收纳篮 型号176,7.56,23509,115,8,1
+P0177,Beauty,美妆,Nail Polish Kit Model 177,指甲油套装 型号177,16.94,36190,396,36,3
+P0178,Toys,玩具,Plush Bear Model 178,毛绒熊 型号178,26.62,4346,114,1,0
+P0179,Sports,运动,Dumbbell Set Model 179,哑铃套装 型号179,15.15,4478,39,8,0
+P0180,Electronics,电子产品,Power Bank Model 180,充电宝 型号180,18.66,3271,21,1,0
+P0181,Apparel,服装,Denim Jacket Model 181,牛仔外套 型号181,33.98,19674,198,16,1
+P0182,Home,家居,Storage Basket Model 182,收纳篮 型号182,27.26,30295,571,95,38
+P0183,Beauty,美妆,Nail Polish Kit Model 183,指甲油套装 型号183,45.49,10100,140,31,3
+P0184,Toys,玩具,Educational Robot Model 184,益智机器人 型号184,19.94,14224,270,23,1
+P0185,Sports,运动,Dumbbell Set Model 185,哑铃套装 型号185,143.34,7912,175,18,3
+P0186,Electronics,电子产品,Bluetooth Speaker Model 186,蓝牙音箱 型号186,31.67,47056,807,49,2
+P0187,Apparel,服装,Cotton T-Shirt Model 187,纯棉T恤 型号187,27.16,12537,325,13,1
+P0188,Home,家居,Ceramic Mug Set Model 188,陶瓷杯套装 型号188,11.53,49077,1212,89,7
+P0189,Beauty,美妆,Vitamin C Serum Model 189,维C精华液 型号189,19.3,3957,84,6,0
+P0190,Toys,玩具,Puzzle 1000pc Model 190,1000片拼图 型号190,6.1,13593,230,12,0
+P0191,Sports,运动,Football Model 191,足球 型号191,5.56,11155,202,16,1
+P0192,Electronics,电子产品,Wireless Earbuds Model 192,无线耳机 型号192,34.82,24608,356,38,2
+P0193,Apparel,服装,Yoga Pants Model 193,瑜伽裤 型号193,14.59,3024,57,3,0
+P0194,Home,家居,Storage Basket Model 194,收纳篮 型号194,36.16,4547,43,10,1
+P0195,Beauty,美妆,Face Mask Pack Model 195,面膜组合 型号195,12.87,3315,95,15,2
+P0196,Toys,玩具,Plush Bear Model 196,毛绒熊 型号196,3.65,37563,374,32,0
+P0197,Sports,运动,Resistance Bands Model 197,弹力带 型号197,35.95,29418,717,58,2
+P0198,Electronics,电子产品,Smart Watch Model 198,智能手表 型号198,8.82,88096,1206,13,1
+P0199,Apparel,服装,Yoga Pants Model 199,瑜伽裤 型号199,151.71,35277,288,26,3
+P0200,Home,家居,LED Desk Lamp Model 200,LED 台灯 型号200,19.2,8182,94,7,1
+P0201,Beauty,美妆,Vitamin C Serum Model 201,维C精华液 型号201,73.33,14128,325,32,2
+P0202,Toys,玩具,Puzzle 1000pc Model 202,1000片拼图 型号202,3.64,22397,132,21,0
+P0203,Sports,运动,Dumbbell Set Model 203,哑铃套装 型号203,26.25,212657,5809,708,14
+P0204,Electronics,电子产品,USB-C Hub Model 204,USB-C 扩展坞 型号204,14.11,59995,1570,206,9
+P0205,Apparel,服装,Denim Jacket Model 205,牛仔外套 型号205,64.55,64301,2537,84,24
+P0206,Home,家居,Bath Towel Model 206,浴巾 型号206,10.17,10525,178,53,3
+P0207,Beauty,美妆,Nail Polish Kit Model 207,指甲油套装 型号207,46.17,2884,40,7,2
+P0208,Toys,玩具,Building Blocks Model 208,积木 型号208,31.41,5500,55,3,0
+P0209,Sports,运动,Dumbbell Set Model 209,哑铃套装 型号209,12.27,2572,53,3,1
+P0210,Electronics,电子产品,Smart Watch Model 210,智能手表 型号210,13.52,7100,173,1,0
+P0211,Apparel,服装,Running Shorts Model 211,跑步短裤 型号211,15.46,13136,588,15,2
+P0212,Home,家居,LED Desk Lamp Model 212,LED 台灯 型号212,22.11,14330,343,10,0
+P0213,Beauty,美妆,Vitamin C Serum Model 213,维C精华液 型号213,15.99,8927,210,9,1
+P0214,Toys,玩具,Plush Bear Model 214,毛绒熊 型号214,21.68,4068,51,1,0
+P0215,Sports,运动,Football Model 215,足球 型号215,39.15,5390,98,0,0
+P0216,Electronics,电子产品,Smart Watch Model 216,智能手表 型号216,22.39,14870,408,74,12
+P0217,Apparel,服装,Cotton T-Shirt Model 217,纯棉T恤 型号217,58.71,121861,2063,20,2
+P0218,Home,家居,Storage Basket Model 218,收纳篮 型号218,82.88,19125,541,25,5
+P0219,Beauty,美妆,Face Mask Pack Model 219,面膜组合 型号219,77.39,23277,178,13,4
+P0220,Toys,玩具,Educational Robot Model 220,益智机器人 型号220,15.9,42119,994,105,10
+P0221,Sports,运动,Dumbbell Set Model 221,哑铃套装 型号221,40.65,21595,476,32,5
+P0222,Electronics,电子产品,Wireless Earbuds Model 222,无线耳机 型号222,22.5,8659,54,9,2
+P0223,Apparel,服装,Denim Jacket Model 223,牛仔外套 型号223,70.99,71853,2279,81,11
+P0224,Home,家居,Bath Towel Model 224,浴巾 型号224,23.14,19560,234,6,1
+P0225,Beauty,美妆,Nail Polish Kit Model 225,指甲油套装 型号225,54.35,14511,528,67,16
+P0226,Toys,玩具,Educational Robot Model 226,益智机器人 型号226,30.86,1970,59,3,0
+P0227,Sports,运动,Football Model 227,足球 型号227,47.55,3530,27,4,0
+P0228,Electronics,电子产品,Power Bank Model 228,充电宝 型号228,14.19,6747,261,26,7
+P0229,Apparel,服装,Wool Sweater Model 229,羊毛毛衣 型号229,11.15,12636,228,33,2
+P0230,Home,家居,Storage Basket Model 230,收纳篮 型号230,22.87,5067,56,8,1
+P0231,Beauty,美妆,Hair Dryer Model 231,电吹风 型号231,27.94,48367,575,46,6
+P0232,Toys,玩具,RC Car Model 232,遥控车 型号232,7.82,8755,167,10,2
+P0233,Sports,运动,Yoga Mat Model 233,瑜伽垫 型号233,20.25,19254,758,82,10
+P0234,Electronics,电子产品,Power Bank Model 234,充电宝 型号234,6.02,10511,360,5,0
+P0235,Apparel,服装,Cotton T-Shirt Model 235,纯棉T恤 型号235,27.56,19795,231,28,3
+P0236,Home,家居,Memory Foam Pillow Model 236,记忆棉枕头 型号236,22.41,12700,325,27,2
+P0237,Beauty,美妆,Vitamin C Serum Model 237,维C精华液 型号237,28.23,48529,366,38,5
+P0238,Toys,玩具,Plush Bear Model 238,毛绒熊 型号238,97.7,8414,149,9,2
+P0239,Sports,运动,Football Model 239,足球 型号239,5.92,37031,1190,199,11
+P0240,Electronics,电子产品,Bluetooth Speaker Model 240,蓝牙音箱 型号240,58.16,4033,99,8,0
+P0241,Apparel,服装,Denim Jacket Model 241,牛仔外套 型号241,14.08,2161,93,11,1
+P0242,Home,家居,Storage Basket Model 242,收纳篮 型号242,16.93,21279,231,42,6
+P0243,Beauty,美妆,Vitamin C Serum Model 243,维C精华液 型号243,15.47,8522,321,28,5
+P0244,Toys,玩具,RC Car Model 244,遥控车 型号244,19.93,35235,981,36,0
+P0245,Sports,运动,Yoga Mat Model 245,瑜伽垫 型号245,18.33,8773,120,14,3
+P0246,Electronics,电子产品,Bluetooth Speaker Model 246,蓝牙音箱 型号246,10.75,13482,228,68,3
+P0247,Apparel,服装,Yoga Pants Model 247,瑜伽裤 型号247,36.4,11997,284,28,5
+P0248,Home,家居,Storage Basket Model 248,收纳篮 型号248,15.58,7180,191,22,2
+P0249,Beauty,美妆,Face Mask Pack Model 249,面膜组合 型号249,27.14,9512,109,2,0
+P0250,Toys,玩具,Puzzle 1000pc Model 250,1000片拼图 型号250,38.78,2114,27,0,0
+P0251,Sports,运动,Football Model 251,足球 型号251,31.33,32656,856,137,20
+P0252,Electronics,电子产品,Power Bank Model 252,充电宝 型号252,22.76,6883,88,2,0
+P0253,Apparel,服装,Cotton T-Shirt Model 253,纯棉T恤 型号253,15.96,8875,163,35,3
+P0254,Home,家居,Bath Towel Model 254,浴巾 型号254,116.24,64596,2904,125,6
+P0255,Beauty,美妆,Matte Lipstick Model 255,哑光口红 型号255,46.55,17620,161,9,3
+P0256,Toys,玩具,Building Blocks Model 256,积木 型号256,17.8,6306,258,49,6
+P0257,Sports,运动,Yoga Mat Model 257,瑜伽垫 型号257,62.52,4147,108,12,1
+P0258,Electronics,电子产品,Wireless Earbuds Model 258,无线耳机 型号258,24.0,18113,225,14,3
+P0259,Apparel,服装,Wool Sweater Model 259,羊毛毛衣 型号259,23.94,7450,142,20,1
+P0260,Home,家居,Ceramic Mug Set Model 260,陶瓷杯套装 型号260,20.98,17314,160,7,1
+P0261,Beauty,美妆,Vitamin C Serum Model 261,维C精华液 型号261,166.03,8222,100,2,0
+P0262,Toys,玩具,Building Blocks Model 262,积木 型号262,16.95,1856,56,2,0
+P0263,Sports,运动,Football Model 263,足球 型号263,14.81,38452,836,194,35
+P0264,Electronics,电子产品,Power Bank Model 264,充电宝 型号264,22.65,23667,230,22,2
+P0265,Apparel,服装,Wool Sweater Model 265,羊毛毛衣 型号265,22.3,5487,77,6,1
+P0266,Home,家居,Memory Foam Pillow Model 266,记忆棉枕头 型号266,23.09,8508,86,6,0
+P0267,Beauty,美妆,Hair Dryer Model 267,电吹风 型号267,19.45,13415,274,37,4
+P0268,Toys,玩具,Plush Bear Model 268,毛绒熊 型号268,24.36,2379,22,4,0
+P0269,Sports,运动,Yoga Mat Model 269,瑜伽垫 型号269,11.89,15585,455,67,16
+P0270,Electronics,电子产品,Wireless Earbuds Model 270,无线耳机 型号270,39.37,4836,67,9,2
+P0271,Apparel,服装,Wool Sweater Model 271,羊毛毛衣 型号271,29.61,45047,1819,219,34
+P0272,Home,家居,Storage Basket Model 272,收纳篮 型号272,42.53,23065,468,53,9
+P0273,Beauty,美妆,Matte Lipstick Model 273,哑光口红 型号273,14.9,7891,80,13,1
+P0274,Toys,玩具,Educational Robot Model 274,益智机器人 型号274,17.85,19386,529,39,2
+P0275,Sports,运动,Dumbbell Set Model 275,哑铃套装 型号275,13.18,193254,3049,69,14
+P0276,Electronics,电子产品,USB-C Hub Model 276,USB-C 扩展坞 型号276,14.94,5336,53,7,1
+P0277,Apparel,服装,Running Shorts Model 277,跑步短裤 型号277,40.52,19536,214,4,0
+P0278,Home,家居,Bath Towel Model 278,浴巾 型号278,7.86,5873,110,2,0
+P0279,Beauty,美妆,Matte Lipstick Model 279,哑光口红 型号279,62.23,9835,307,31,6
+P0280,Toys,玩具,Building Blocks Model 280,积木 型号280,10.8,36937,839,13,4
+P0281,Sports,运动,Resistance Bands Model 281,弹力带 型号281,30.09,7391,84,9,0
+P0282,Electronics,电子产品,Wireless Earbuds Model 282,无线耳机 型号282,16.65,23058,718,125,7
+P0283,Apparel,服装,Yoga Pants Model 283,瑜伽裤 型号283,32.12,5745,52,6,0
+P0284,Home,家居,LED Desk Lamp Model 284,LED 台灯 型号284,91.42,5560,84,7,1
+P0285,Beauty,美妆,Matte Lipstick Model 285,哑光口红 型号285,19.1,5892,182,13,1
+P0286,Toys,玩具,RC Car Model 286,遥控车 型号286,98.98,28813,392,59,17
+P0287,Sports,运动,Resistance Bands Model 287,弹力带 型号287,30.63,8145,193,9,0
+P0288,Electronics,电子产品,Smart Watch Model 288,智能手表 型号288,53.56,293171,6830,1005,90
+P0289,Apparel,服装,Yoga Pants Model 289,瑜伽裤 型号289,58.55,31670,525,22,1
+P0290,Home,家居,Ceramic Mug Set Model 290,陶瓷杯套装 型号290,39.18,14244,183,13,1
+P0291,Beauty,美妆,Hair Dryer Model 291,电吹风 型号291,36.25,4541,36,1,0
+P0292,Toys,玩具,Plush Bear Model 292,毛绒熊 型号292,11.78,14256,316,48,4
+P0293,Sports,运动,Resistance Bands Model 293,弹力带 型号293,23.46,1395,27,1,0
+P0294,Electronics,电子产品,USB-C Hub Model 294,USB-C 扩展坞 型号294,7.53,7451,133,7,0
+P0295,Apparel,服装,Yoga Pants Model 295,瑜伽裤 型号295,14.37,12413,276,33,2
+P0296,Home,家居,Storage Basket Model 296,收纳篮 型号296,39.68,5410,85,11,0
+P0297,Beauty,美妆,Hair Dryer Model 297,电吹风 型号297,18.3,71048,1636,218,20
+P0298,Toys,玩具,RC Car Model 298,遥控车 型号298,27.37,45633,824,81,11
+P0299,Sports,运动,Football Model 299,足球 型号299,46.25,2683,97,8,0
+P0300,Electronics,电子产品,USB-C Hub Model 300,USB-C 扩展坞 型号300,25.46,14242,212,38,4
+P0301,Apparel,服装,Cotton T-Shirt Model 301,纯棉T恤 型号301,115.9,27480,1027,55,15
+P0302,Home,家居,Storage Basket Model 302,收纳篮 型号302,36.35,105229,3743,37,3
+P0303,Beauty,美妆,Hair Dryer Model 303,电吹风 型号303,39.99,1575,25,4,0
+P0304,Toys,玩具,RC Car Model 304,遥控车 型号304,30.34,14610,233,7,1
+P0305,Sports,运动,Football Model 305,足球 型号305,20.39,24214,385,90,24
+P0306,Electronics,电子产品,Wireless Earbuds Model 306,无线耳机 型号306,36.91,3314,43,7,0
+P0307,Apparel,服装,Denim Jacket Model 307,牛仔外套 型号307,41.49,6455,118,9,2
+P0308,Home,家居,Bath Towel Model 308,浴巾 型号308,21.13,49365,1059,102,20
+P0309,Beauty,美妆,Face Mask Pack Model 309,面膜组合 型号309,21.69,20021,315,12,2
+P0310,Toys,玩具,Building Blocks Model 310,积木 型号310,51.5,10376,168,22,3
+P0311,Sports,运动,Dumbbell Set Model 311,哑铃套装 型号311,93.81,27373,271,27,4
+P0312,Electronics,电子产品,Smart Watch Model 312,智能手表 型号312,32.19,16091,382,6,0
+P0313,Apparel,服装,Denim Jacket Model 313,牛仔外套 型号313,28.86,6004,82,4,0
+P0314,Home,家居,Storage Basket Model 314,收纳篮 型号314,74.95,35180,2121,50,1
+P0315,Beauty,美妆,Hair Dryer Model 315,电吹风 型号315,41.1,6213,83,4,0
+P0316,Toys,玩具,Puzzle 1000pc Model 316,1000片拼图 型号316,31.9,7132,82,9,0
+P0317,Sports,运动,Dumbbell Set Model 317,哑铃套装 型号317,63.59,6954,117,9,1
+P0318,Electronics,电子产品,Wireless Earbuds Model 318,无线耳机 型号318,14.62,10157,87,13,2
+P0319,Apparel,服装,Wool Sweater Model 319,羊毛毛衣 型号319,40.39,18919,303,72,10
+P0320,Home,家居,Storage Basket Model 320,收纳篮 型号320,24.72,4444,33,2,0
+P0321,Beauty,美妆,Hair Dryer Model 321,电吹风 型号321,39.99,6721,125,6,0
+P0322,Toys,玩具,Plush Bear Model 322,毛绒熊 型号322,72.25,27401,472,4,0
+P0323,Sports,运动,Resistance Bands Model 323,弹力带 型号323,23.56,5477,68,3,0
+P0324,Electronics,电子产品,Power Bank Model 324,充电宝 型号324,21.81,14481,176,6,0
+P0325,Apparel,服装,Running Shorts Model 325,跑步短裤 型号325,50.86,12078,434,41,1
+P0326,Home,家居,Ceramic Mug Set Model 326,陶瓷杯套装 型号326,17.17,8200,319,23,0
+P0327,Beauty,美妆,Face Mask Pack Model 327,面膜组合 型号327,6.47,32859,411,85,18
+P0328,Toys,玩具,Building Blocks Model 328,积木 型号328,20.92,3744,82,1,0
+P0329,Sports,运动,Football Model 329,足球 型号329,35.05,33777,884,49,13
+P0330,Electronics,电子产品,Wireless Earbuds Model 330,无线耳机 型号330,5.43,19440,138,5,1
+P0331,Apparel,服装,Denim Jacket Model 331,牛仔外套 型号331,18.18,27507,236,22,3
+P0332,Home,家居,Storage Basket Model 332,收纳篮 型号332,53.86,967,11,0,0
+P0333,Beauty,美妆,Hair Dryer Model 333,电吹风 型号333,17.48,6425,112,11,2
+P0334,Toys,玩具,RC Car Model 334,遥控车 型号334,48.59,16831,340,7,0
+P0335,Sports,运动,Resistance Bands Model 335,弹力带 型号335,21.97,9714,160,3,0
+P0336,Electronics,电子产品,Power Bank Model 336,充电宝 型号336,12.82,24127,299,7,0
+P0337,Apparel,服装,Cotton T-Shirt Model 337,纯棉T恤 型号337,9.28,27285,271,71,18
+P0338,Home,家居,LED Desk Lamp Model 338,LED 台灯 型号338,16.57,3976,37,3,0
+P0339,Beauty,美妆,Face Mask Pack Model 339,面膜组合 型号339,65.93,6275,116,4,0
+P0340,Toys,玩具,RC Car Model 340,遥控车 型号340,6.83,3401,149,6,0
+P0341,Sports,运动,Dumbbell Set Model 341,哑铃套装 型号341,6.85,4685,50,0,0
+P0342,Electronics,电子产品,Smart Watch Model 342,智能手表 型号342,29.29,19834,419,24,7
+P0343,Apparel,服装,Wool Sweater Model 343,羊毛毛衣 型号343,13.4,4645,121,12,2
+P0344,Home,家居,Storage Basket Model 344,收纳篮 型号344,19.23,5780,147,20,2
+P0345,Beauty,美妆,Face Mask Pack Model 345,面膜组合 型号345,23.27,8886,162,30,8
+P0346,Toys,玩具,RC Car Model 346,遥控车 型号346,11.07,4701,62,2,0
+P0347,Sports,运动,Football Model 347,足球 型号347,20.02,28122,745,86,7
+P0348,Electronics,电子产品,Smart Watch Model 348,智能手表 型号348,11.86,17737,190,11,2
+P0349,Apparel,服装,Wool Sweater Model 349,羊毛毛衣 型号349,30.04,32702,674,192,24
+P0350,Home,家居,Storage Basket Model 350,收纳篮 型号350,42.5,74819,1466,94,10
+P0351,Beauty,美妆,Vitamin C Serum Model 351,维C精华液 型号351,7.14,5500,61,3,0
+P0352,Toys,玩具,RC Car Model 352,遥控车 型号352,27.92,120432,2148,104,16
+P0353,Sports,运动,Cycling Helmet Model 353,骑行头盔 型号353,21.49,7584,124,11,0
+P0354,Electronics,电子产品,Bluetooth Speaker Model 354,蓝牙音箱 型号354,49.04,27267,658,42,2
+P0355,Apparel,服装,Running Shorts Model 355,跑步短裤 型号355,23.11,12161,72,5,0
+P0356,Home,家居,Storage Basket Model 356,收纳篮 型号356,16.31,40444,1119,82,6
+P0357,Beauty,美妆,Face Mask Pack Model 357,面膜组合 型号357,151.6,14208,174,8,1
+P0358,Toys,玩具,Building Blocks Model 358,积木 型号358,13.16,85000,1283,139,15
+P0359,Sports,运动,Football Model 359,足球 型号359,38.0,5951,79,15,1
+P0360,Electronics,电子产品,Bluetooth Speaker Model 360,蓝牙音箱 型号360,22.86,36682,567,33,6
+P0361,Apparel,服装,Cotton T-Shirt Model 361,纯棉T恤 型号361,74.17,16344,177,9,1
+P0362,Home,家居,Ceramic Mug Set Model 362,陶瓷杯套装 型号362,22.35,2360,34,7,0
+P0363,Beauty,美妆,Face Mask Pack Model 363,面膜组合 型号363,35.33,3527,32,4,0
+P0364,Toys,玩具,RC Car Model 364,遥控车 型号364,39.87,14380,178,5,0
+P0365,Sports,运动,Football Model 365,足球 型号365,7.9,140902,2499,300,88
+P0366,Electronics,电子产品,Wireless Earbuds Model 366,无线耳机 型号366,68.17,5749,119,1,0
+P0367,Apparel,服装,Cotton T-Shirt Model 367,纯棉T恤 型号367,19.97,13478,378,63,11
+P0368,Home,家居,Ceramic Mug Set Model 368,陶瓷杯套装 型号368,35.94,74541,1105,131,8
+P0369,Beauty,美妆,Nail Polish Kit Model 369,指甲油套装 型号369,14.37,33021,1062,108,18
+P0370,Toys,玩具,RC Car Model 370,遥控车 型号370,25.15,5718,60,2,0
+P0371,Sports,运动,Football Model 371,足球 型号371,17.34,21641,155,10,2
+P0372,Electronics,电子产品,USB-C Hub Model 372,USB-C 扩展坞 型号372,11.93,31817,409,22,3
+P0373,Apparel,服装,Wool Sweater Model 373,羊毛毛衣 型号373,107.26,19805,293,44,9
+P0374,Home,家居,Ceramic Mug Set Model 374,陶瓷杯套装 型号374,95.0,6541,83,7,0
+P0375,Beauty,美妆,Vitamin C Serum Model 375,维C精华液 型号375,19.9,6908,287,17,1
+P0376,Toys,玩具,RC Car Model 376,遥控车 型号376,32.1,1238,26,2,0
+P0377,Sports,运动,Dumbbell Set Model 377,哑铃套装 型号377,11.49,274795,3458,311,24
+P0378,Electronics,电子产品,Wireless Earbuds Model 378,无线耳机 型号378,106.65,4056,156,29,2
+P0379,Apparel,服装,Denim Jacket Model 379,牛仔外套 型号379,60.19,12318,173,11,1
+P0380,Home,家居,Storage Basket Model 380,收纳篮 型号380,7.6,4782,59,9,1
+P0381,Beauty,美妆,Vitamin C Serum Model 381,维C精华液 型号381,4.27,35197,792,51,2
+P0382,Toys,玩具,RC Car Model 382,遥控车 型号382,7.31,11703,166,4,0
+P0383,Sports,运动,Football Model 383,足球 型号383,40.0,2620,104,12,0
+P0384,Electronics,电子产品,Power Bank Model 384,充电宝 型号384,8.91,12727,181,9,0
+P0385,Apparel,服装,Wool Sweater Model 385,羊毛毛衣 型号385,76.91,11670,305,17,1
+P0386,Home,家居,LED Desk Lamp Model 386,LED 台灯 型号386,7.87,6662,72,13,0
+P0387,Beauty,美妆,Hair Dryer Model 387,电吹风 型号387,33.19,90034,2476,214,33
+P0388,Toys,玩具,RC Car Model 388,遥控车 型号388,10.36,20419,371,82,2
+P0389,Sports,运动,Dumbbell Set Model 389,哑铃套装 型号389,14.92,10221,137,13,0
+P0390,Electronics,电子产品,USB-C Hub Model 390,USB-C 扩展坞 型号390,170.94,5901,123,4,0
+P0391,Apparel,服装,Cotton T-Shirt Model 391,纯棉T恤 型号391,33.5,16575,292,33,9
+P0392,Home,家居,LED Desk Lamp Model 392,LED 台灯 型号392,11.91,6404,70,8,1
+P0393,Beauty,美妆,Nail Polish Kit Model 393,指甲油套装 型号393,8.62,29641,375,95,17
+P0394,Toys,玩具,RC Car Model 394,遥控车 型号394,26.39,34704,936,107,19
+P0395,Sports,运动,Resistance Bands Model 395,弹力带 型号395,26.05,37769,375,31,4
+P0396,Electronics,电子产品,Wireless Earbuds Model 396,无线耳机 型号396,32.89,5353,111,2,0
+P0397,Apparel,服装,Cotton T-Shirt Model 397,纯棉T恤 型号397,2.84,46296,892,46,4
+P0398,Home,家居,LED Desk Lamp Model 398,LED 台灯 型号398,46.21,3800,94,4,0
+P0399,Beauty,美妆,Hair Dryer Model 399,电吹风 型号399,35.05,12057,493,42,2
+P0400,Toys,玩具,RC Car Model 400,遥控车 型号400,46.57,15502,531,32,0
+P0401,Sports,运动,Dumbbell Set Model 401,哑铃套装 型号401,84.5,16984,264,39,7
+P0402,Electronics,电子产品,Smart Watch Model 402,智能手表 型号402,38.32,11900,235,10,1
+P0403,Apparel,服装,Cotton T-Shirt Model 403,纯棉T恤 型号403,15.79,70185,309,10,0
+P0404,Home,家居,Ceramic Mug Set Model 404,陶瓷杯套装 型号404,15.93,29351,372,19,1
+P0405,Beauty,美妆,Face Mask Pack Model 405,面膜组合 型号405,10.64,8334,110,18,2
+P0406,Toys,玩具,Puzzle 1000pc Model 406,1000片拼图 型号406,20.31,5194,153,16,1
+P0407,Sports,运动,Dumbbell Set Model 407,哑铃套装 型号407,6.7,9333,223,9,2
+P0408,Electronics,电子产品,Smart Watch Model 408,智能手表 型号408,17.17,23346,453,43,1
+P0409,Apparel,服装,Cotton T-Shirt Model 409,纯棉T恤 型号409,14.9,7176,93,6,0
+P0410,Home,家居,Memory Foam Pillow Model 410,记忆棉枕头 型号410,22.27,19168,493,39,3
+P0411,Beauty,美妆,Face Mask Pack Model 411,面膜组合 型号411,38.87,20377,308,12,3
+P0412,Toys,玩具,Building Blocks Model 412,积木 型号412,18.42,17807,346,3,0
+P0413,Sports,运动,Dumbbell Set Model 413,哑铃套装 型号413,31.81,9637,160,18,1
+P0414,Electronics,电子产品,Power Bank Model 414,充电宝 型号414,19.76,11944,204,15,1
+P0415,Apparel,服装,Wool Sweater Model 415,羊毛毛衣 型号415,29.97,22142,195,42,2
+P0416,Home,家居,Ceramic Mug Set Model 416,陶瓷杯套装 型号416,88.68,44608,965,51,4
+P0417,Beauty,美妆,Vitamin C Serum Model 417,维C精华液 型号417,41.39,10540,271,11,1
+P0418,Toys,玩具,Educational Robot Model 418,益智机器人 型号418,7.06,3572,64,19,2
+P0419,Sports,运动,Football Model 419,足球 型号419,32.47,31137,448,25,3
+P0420,Electronics,电子产品,Power Bank Model 420,充电宝 型号420,15.12,7567,131,11,0
+P0421,Apparel,服装,Running Shorts Model 421,跑步短裤 型号421,39.04,3367,47,2,0
+P0422,Home,家居,Ceramic Mug Set Model 422,陶瓷杯套装 型号422,8.56,1905,19,1,0
+P0423,Beauty,美妆,Matte Lipstick Model 423,哑光口红 型号423,11.0,2875,29,2,0
+P0424,Toys,玩具,Puzzle 1000pc Model 424,1000片拼图 型号424,5.99,10565,348,8,0
+P0425,Sports,运动,Football Model 425,足球 型号425,12.23,14566,167,10,1
+P0426,Electronics,电子产品,USB-C Hub Model 426,USB-C 扩展坞 型号426,51.91,23822,556,17,1
+P0427,Apparel,服装,Cotton T-Shirt Model 427,纯棉T恤 型号427,87.72,11250,365,57,3
+P0428,Home,家居,Bath Towel Model 428,浴巾 型号428,17.18,1665,31,1,0
+P0429,Beauty,美妆,Hair Dryer Model 429,电吹风 型号429,13.19,22036,474,15,1
+P0430,Toys,玩具,Building Blocks Model 430,积木 型号430,28.49,3586,31,4,1
+P0431,Sports,运动,Dumbbell Set Model 431,哑铃套装 型号431,37.68,9083,117,10,1
+P0432,Electronics,电子产品,Smart Watch Model 432,智能手表 型号432,111.22,53372,1146,76,6
+P0433,Apparel,服装,Running Shorts Model 433,跑步短裤 型号433,26.16,1595,38,1,0
+P0434,Home,家居,Storage Basket Model 434,收纳篮 型号434,18.8,18762,308,14,0
+P0435,Beauty,美妆,Nail Polish Kit Model 435,指甲油套装 型号435,13.87,24018,476,10,1
+P0436,Toys,玩具,RC Car Model 436,遥控车 型号436,23.27,7601,97,11,1
+P0437,Sports,运动,Cycling Helmet Model 437,骑行头盔 型号437,14.05,20506,415,7,1
+P0438,Electronics,电子产品,Smart Watch Model 438,智能手表 型号438,24.52,18988,277,14,1
+P0439,Apparel,服装,Yoga Pants Model 439,瑜伽裤 型号439,17.44,968,16,1,0
+P0440,Home,家居,Ceramic Mug Set Model 440,陶瓷杯套装 型号440,43.4,6178,48,1,0
+P0441,Beauty,美妆,Hair Dryer Model 441,电吹风 型号441,10.94,4678,84,13,0
+P0442,Toys,玩具,RC Car Model 442,遥控车 型号442,26.01,13827,147,21,2
+P0443,Sports,运动,Cycling Helmet Model 443,骑行头盔 型号443,65.1,8281,145,27,3
+P0444,Electronics,电子产品,Smart Watch Model 444,智能手表 型号444,14.72,14760,237,39,1
+P0445,Apparel,服装,Running Shorts Model 445,跑步短裤 型号445,8.4,13344,309,13,0
+P0446,Home,家居,Bath Towel Model 446,浴巾 型号446,25.26,5904,165,9,0
+P0447,Beauty,美妆,Vitamin C Serum Model 447,维C精华液 型号447,39.19,29831,485,22,2
+P0448,Toys,玩具,Puzzle 1000pc Model 448,1000片拼图 型号448,73.59,17386,325,12,0
+P0449,Sports,运动,Football Model 449,足球 型号449,15.41,21351,350,3,0
+P0450,Electronics,电子产品,Bluetooth Speaker Model 450,蓝牙音箱 型号450,90.18,12291,226,50,14
+P0451,Apparel,服装,Yoga Pants Model 451,瑜伽裤 型号451,7.51,67257,1322,85,16
+P0452,Home,家居,Bath Towel Model 452,浴巾 型号452,11.41,104795,1716,514,39
+P0453,Beauty,美妆,Hair Dryer Model 453,电吹风 型号453,33.39,4549,91,10,0
+P0454,Toys,玩具,Building Blocks Model 454,积木 型号454,75.95,34097,636,20,2
+P0455,Sports,运动,Resistance Bands Model 455,弹力带 型号455,20.33,3072,33,1,0
+P0456,Electronics,电子产品,Power Bank Model 456,充电宝 型号456,63.89,32344,786,91,20
+P0457,Apparel,服装,Cotton T-Shirt Model 457,纯棉T恤 型号457,32.91,9781,271,3,0
+P0458,Home,家居,Ceramic Mug Set Model 458,陶瓷杯套装 型号458,48.38,6642,177,24,2
+P0459,Beauty,美妆,Nail Polish Kit Model 459,指甲油套装 型号459,22.7,55621,2353,598,24
+P0460,Toys,玩具,Building Blocks Model 460,积木 型号460,36.51,22733,250,31,1
+P0461,Sports,运动,Yoga Mat Model 461,瑜伽垫 型号461,39.34,6897,49,5,0
+P0462,Electronics,电子产品,USB-C Hub Model 462,USB-C 扩展坞 型号462,33.23,5193,63,8,1
+P0463,Apparel,服装,Denim Jacket Model 463,牛仔外套 型号463,13.57,12809,314,41,6
+P0464,Home,家居,Memory Foam Pillow Model 464,记忆棉枕头 型号464,72.3,27257,300,11,1
+P0465,Beauty,美妆,Hair Dryer Model 465,电吹风 型号465,30.05,26760,224,11,3
+P0466,Toys,玩具,Building Blocks Model 466,积木 型号466,33.76,18101,757,108,15
+P0467,Sports,运动,Yoga Mat Model 467,瑜伽垫 型号467,27.03,1775,30,1,0
+P0468,Electronics,电子产品,Power Bank Model 468,充电宝 型号468,20.91,13295,369,25,7
+P0469,Apparel,服装,Yoga Pants Model 469,瑜伽裤 型号469,15.8,82016,1480,317,19
+P0470,Home,家居,Memory Foam Pillow Model 470,记忆棉枕头 型号470,74.48,9733,154,27,3
+P0471,Beauty,美妆,Nail Polish Kit Model 471,指甲油套装 型号471,19.86,5267,82,23,3
+P0472,Toys,玩具,Building Blocks Model 472,积木 型号472,62.84,2291,74,6,1
+P0473,Sports,运动,Football Model 473,足球 型号473,10.3,22147,587,89,1
+P0474,Electronics,电子产品,USB-C Hub Model 474,USB-C 扩展坞 型号474,52.16,4025,66,6,0
+P0475,Apparel,服装,Cotton T-Shirt Model 475,纯棉T恤 型号475,31.57,4507,135,6,0
+P0476,Home,家居,Bath Towel Model 476,浴巾 型号476,23.51,42690,539,7,0
+P0477,Beauty,美妆,Matte Lipstick Model 477,哑光口红 型号477,13.73,23624,168,25,2
+P0478,Toys,玩具,Building Blocks Model 478,积木 型号478,46.78,58501,1268,212,26
+P0479,Sports,运动,Resistance Bands Model 479,弹力带 型号479,40.79,32425,356,46,6
+P0480,Electronics,电子产品,Power Bank Model 480,充电宝 型号480,13.77,10357,57,3,0
+P0481,Apparel,服装,Running Shorts Model 481,跑步短裤 型号481,16.54,1443,15,0,0
+P0482,Home,家居,LED Desk Lamp Model 482,LED 台灯 型号482,7.15,7187,105,4,0
+P0483,Beauty,美妆,Matte Lipstick Model 483,哑光口红 型号483,48.38,11380,101,12,0
+P0484,Toys,玩具,Plush Bear Model 484,毛绒熊 型号484,9.74,5462,32,3,0
+P0485,Sports,运动,Cycling Helmet Model 485,骑行头盔 型号485,96.68,35858,764,29,2
+P0486,Electronics,电子产品,Wireless Earbuds Model 486,无线耳机 型号486,15.44,3486,141,3,0
+P0487,Apparel,服装,Cotton T-Shirt Model 487,纯棉T恤 型号487,18.64,2796,68,10,0
+P0488,Home,家居,Memory Foam Pillow Model 488,记忆棉枕头 型号488,10.55,7692,149,8,0
+P0489,Beauty,美妆,Nail Polish Kit Model 489,指甲油套装 型号489,35.48,18403,301,15,3
+P0490,Toys,玩具,Plush Bear Model 490,毛绒熊 型号490,20.64,14785,298,40,11
+P0491,Sports,运动,Cycling Helmet Model 491,骑行头盔 型号491,22.6,13788,314,84,6
+P0492,Electronics,电子产品,Smart Watch Model 492,智能手表 型号492,5.92,26213,1231,27,2
+P0493,Apparel,服装,Yoga Pants Model 493,瑜伽裤 型号493,32.82,23976,351,3,0
+P0494,Home,家居,Storage Basket Model 494,收纳篮 型号494,45.68,24369,333,27,3
+P0495,Beauty,美妆,Nail Polish Kit Model 495,指甲油套装 型号495,30.84,36389,624,76,6
+P0496,Toys,玩具,Puzzle 1000pc Model 496,1000片拼图 型号496,16.34,2576,56,6,0
+P0497,Sports,运动,Yoga Mat Model 497,瑜伽垫 型号497,83.6,52631,1279,56,9
+P0498,Electronics,电子产品,Power Bank Model 498,充电宝 型号498,15.04,2106,32,5,0
+P0499,Apparel,服装,Running Shorts Model 499,跑步短裤 型号499,12.97,31798,119,18,1
