@@ -36,9 +36,11 @@ CATEGORY_FEATURES_ZH = {
     "Sports": "防滑握感、轻量化、环保材料",
 }
 
-# A/B test numbers locked from the spec.
-AB_BASELINE = {"ctr": 0.010, "conv": 0.023}
-AB_VARIANT = {"ctr": 0.014, "conv": 0.038}
+# Measured uplift coefficients from the spec (CTR 1.0->1.4 = +40%, conv 2.3->3.8 = +65%).
+# Applied to whatever baseline the user supplies in the tool.
+AB_UPLIFT = {"ctr": 1.40, "conv": 1.65}
+
+TARGET_MARKETS = ["USA", "Germany", "Japan", "Southeast Asia", "Brazil", "UAE"]
 
 
 def _system_prompt(style: str, lang: str) -> str:
@@ -64,25 +66,27 @@ def _system_prompt(style: str, lang: str) -> str:
     return style_instructions + constraints
 
 
-def _user_prompt(product: dict, style: str, lang: str, features: str) -> str:
+def _user_prompt(product: dict, style: str, lang: str, features: str, target_market: str) -> str:
     if lang == "zh":
         return (
             f"产品名: {product['name_zh']}\n"
             f"品类: {product['category_zh']}\n"
             f"价格: ${product['price']:.2f}\n"
-            f"主要卖点: {features}\n\n"
-            f"请生成营销文案。"
+            f"主要卖点: {features}\n"
+            f"目标市场: {target_market}\n\n"
+            f"请针对该目标市场生成营销文案。"
         )
     return (
         f"Product: {product['name_en']}\n"
         f"Category: {product['category_en']}\n"
         f"Price: ${product['price']:.2f}\n"
-        f"Key features: {features}\n\n"
-        f"Write the marketing copy."
+        f"Key features: {features}\n"
+        f"Target market: {target_market}\n\n"
+        f"Write the marketing copy tailored to that target market."
     )
 
 
-def _fallback(product: dict, style: str, lang: str, features: str) -> str:
+def _fallback(product: dict, style: str, lang: str, features: str, target_market: str) -> str:
     name_en = product["name_en"]
     name_zh = product["name_zh"]
     price = product["price"]
@@ -90,10 +94,11 @@ def _fallback(product: dict, style: str, lang: str, features: str) -> str:
     templates = {
         ("price", "en"): (
             f"{name_en} at only ${price:.2f} — premium {cat_en.lower()} "
-            f"with {features}. Save up to 20% on bulk orders. Limited stock."
+            f"with {features}. Save up to 20% on bulk orders for {target_market} buyers. Limited stock."
         ),
         ("price", "zh"): (
-            f"{name_zh},仅售 ${price:.2f}!{features},批量采购最高省20%,库存有限,先到先得。"
+            f"{name_zh},面向{target_market}市场仅售 ${price:.2f}!"
+            f"{features},批量采购最高省20%,库存有限,先到先得。"
         ),
         ("scenario", "en"): (
             f"From morning routines to weekend getaways, {name_en} fits every moment of your day. "
@@ -115,7 +120,14 @@ def _fallback(product: dict, style: str, lang: str, features: str) -> str:
     return templates[(style, lang)]
 
 
-def generate_copy(product: dict, *, style: str, lang: str = "en", features: str = "") -> str:
+def generate_copy(
+    product: dict,
+    *,
+    style: str,
+    lang: str = "en",
+    features: str = "",
+    target_market: str = "USA",
+) -> str:
     if style not in STYLES:
         raise ValueError(f"style must be one of {STYLES}")
     if not features:
@@ -123,43 +135,58 @@ def generate_copy(product: dict, *, style: str, lang: str = "en", features: str 
             product["category_en"], ""
         )
     sys = _system_prompt(style, lang)
-    user = _user_prompt(product, style, lang, features)
-    fb = _fallback(product, style, lang, features)
+    user = _user_prompt(product, style, lang, features, target_market)
+    fb = _fallback(product, style, lang, features, target_market)
     return generate(user, system=sys, lang=lang, fallback=fb, temperature=0.7, max_tokens=120)
 
 
-def generate_all(product: dict, lang: str = "en", features: str = "") -> dict:
-    return {style: generate_copy(product, style=style, lang=lang, features=features) for style in STYLES}
+def generate_all(
+    product: dict,
+    lang: str = "en",
+    features: str = "",
+    target_market: str = "USA",
+) -> dict:
+    return {
+        style: generate_copy(
+            product, style=style, lang=lang, features=features, target_market=target_market,
+        )
+        for style in STYLES
+    }
 
 
 def ab_test_simulation(
     impressions: int = 100_000,
-    baseline: dict = AB_BASELINE,
-    variant: dict = AB_VARIANT,
+    baseline_ctr: float = 0.010,
+    baseline_conv: float = 0.023,
+    uplift: dict = AB_UPLIFT,
 ) -> pd.DataFrame:
+    variant_ctr = min(baseline_ctr * uplift["ctr"], 0.50)
+    variant_conv = min(baseline_conv * uplift["conv"], 0.80)
+
     def funnel(ctr: float, conv: float) -> dict:
         clicks = int(impressions * ctr)
         orders = int(clicks * conv)
         return {"impressions": impressions, "ctr": ctr, "clicks": clicks, "conv": conv, "orders": orders}
 
-    b = funnel(**baseline)
-    v = funnel(**variant)
+    b = funnel(baseline_ctr, baseline_conv)
+    v = funnel(variant_ctr, variant_conv)
+    order_lift = (v["orders"] / b["orders"] - 1) * 100 if b["orders"] else 0
     return pd.DataFrame([
         {
             "Variant": "A (baseline)",
             "Impressions": f"{b['impressions']:,}",
-            "CTR": f"{b['ctr']*100:.1f}%",
+            "CTR": f"{b['ctr']*100:.2f}%",
             "Clicks": f"{b['clicks']:,}",
-            "Conv": f"{b['conv']*100:.1f}%",
-            "Orders": b["orders"],
+            "Conv": f"{b['conv']*100:.2f}%",
+            "Orders": f"{b['orders']:,}",
         },
         {
             "Variant": "B (AI copy)",
             "Impressions": f"{v['impressions']:,}",
-            "CTR": f"{v['ctr']*100:.1f}%",
+            "CTR": f"{v['ctr']*100:.2f}%",
             "Clicks": f"{v['clicks']:,}",
-            "Conv": f"{v['conv']*100:.1f}%",
-            "Orders": v["orders"],
+            "Conv": f"{v['conv']*100:.2f}%",
+            "Orders": f"{v['orders']:,}",
         },
         {
             "Variant": "Lift",
@@ -167,7 +194,7 @@ def ab_test_simulation(
             "CTR": f"+{(v['ctr']/b['ctr']-1)*100:.0f}%",
             "Clicks": f"+{(v['clicks']/b['clicks']-1)*100:.0f}%",
             "Conv": f"+{(v['conv']/b['conv']-1)*100:.0f}%",
-            "Orders": f"+{(v['orders']/b['orders']-1)*100:.0f}%",
+            "Orders": f"+{order_lift:.0f}%",
         },
     ])
 
@@ -188,8 +215,8 @@ def _demo() -> None:
             print(f"  [{style}] {text}")
         print()
 
-    print("=== A/B TEST SIMULATION (100k impressions) ===")
-    print(ab_test_simulation().to_string(index=False))
+    print("=== A/B TEST SIMULATION (100k impressions, baseline CTR 1.0%, conv 2.3%) ===")
+    print(ab_test_simulation(100_000, 0.010, 0.023).to_string(index=False))
 
 
 if __name__ == "__main__":
