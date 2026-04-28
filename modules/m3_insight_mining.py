@@ -47,10 +47,24 @@ KEYWORDS: dict[str, dict[str, list[str]]] = {
 }
 
 ACTIONS_BY_THEME: dict[str, str] = {
-    "price": "Introduce tiered pricing for >500 units and publish a bulk-discount table on the PDP.",
-    "delivery": "Publish lead-time and shipping options (DDP / air / sea) on the PDP, with country-specific ETAs.",
-    "feature": "Add a downloadable spec sheet and surface certifications (CE, BPA-free, IPX rating) above the fold.",
-    "customization": "Add an OEM/ODM inquiry CTA and a 'private label packaging' callout on the PDP.",
+    "price": "Add tiered pricing table + MOQ discount on PDP",
+    "delivery": "Add estimated shipping time by region",
+    "feature": "Highlight top 3 specs in product title",
+    "customization": "Add 'customization available' badge",
+}
+
+INTERPRETATIONS: dict[str, str] = {
+    "price": "indicating pricing transparency issues — buyers can't easily compare value",
+    "delivery": "suggesting logistics or lead-time uncertainty",
+    "feature": "indicating spec / certification gaps on the PDP",
+    "customization": "showing strong B2B private-label / OEM demand",
+}
+
+EXPECTED_IMPACT = {
+    "high_match_before_pct": 35.0,
+    "high_match_after_pct": 61.0,
+    "triage_hours_before": 10.0,
+    "triage_minutes_after": 30,
 }
 
 
@@ -116,6 +130,66 @@ def top_quotes(df: pd.DataFrame, theme: str, n: int = 5) -> list[str]:
 
 def recommended_action(theme: str) -> str:
     return ACTIONS_BY_THEME.get(theme, "")
+
+
+def key_insights(df: pd.DataFrame) -> list[str]:
+    """Auto-generate 2-3 decision-support bullets from the classification.
+
+    Always emits a dominant-theme insight; tries to find a language gap
+    (>=10pp difference between EN and ZH share) for the second bullet,
+    otherwise highlights the top-2 combined coverage; closes with the
+    smallest segment as an upsell opportunity.
+    """
+    if df.empty:
+        return []
+    dist = theme_distribution(df)
+    out: list[str] = []
+
+    top = dist.iloc[0]
+    out.append(
+        f"**{top['theme'].title()}** is the dominant concern "
+        f"({top['share']}%) — {INTERPRETATIONS.get(top['theme'], '')}."
+    )
+
+    lang_insight = None
+    if "lang" in df.columns and df["lang"].nunique() > 1:
+        for theme in THEMES:
+            for lang in df["lang"].unique():
+                lang_df = df[df["lang"] == lang]
+                other_df = df[df["lang"] != lang]
+                if len(lang_df) < 30 or len(other_df) < 30:
+                    continue
+                share = (lang_df["predicted_theme"] == theme).mean() * 100
+                other = (other_df["predicted_theme"] == theme).mean() * 100
+                if share - other >= 10:
+                    label = "English-speaking" if lang == "en" else "Chinese-speaking"
+                    lang_insight = (
+                        f"**{theme.title()}** is concentrated in {label} traffic "
+                        f"({share:.0f}% vs {other:.0f}%) — likely a regional gap."
+                    )
+                    break
+            if lang_insight:
+                break
+    if lang_insight:
+        out.append(lang_insight)
+    elif len(dist) >= 2:
+        top2 = dist.head(2)
+        combined = float(top2["share"].sum())
+        names = " + ".join(t.title() for t in top2["theme"])
+        out.append(
+            f"**{names}** together cover {combined:.0f}% of inquiries — "
+            f"PDP improvements here have outsized impact."
+        )
+
+    if len(dist) >= 3:
+        bottom = dist.iloc[-1]
+        out.append(
+            f"**{bottom['theme'].title()}** is the smallest segment "
+            f"({bottom['share']}%) — under-served audience; "
+            f"action: {ACTIONS_BY_THEME[bottom['theme']].lower()}."
+        )
+
+    return out[:3]
 
 
 def _demo() -> None:

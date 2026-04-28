@@ -23,9 +23,11 @@ from modules.m2_copy_gen import (
 )
 from modules.m3_insight_mining import (
     ACTIONS_BY_THEME,
+    EXPECTED_IMPACT,
     THEMES,
     classifier_accuracy,
     classify_batch,
+    key_insights,
     recommended_action,
     theme_distribution,
     top_quotes,
@@ -159,7 +161,6 @@ with tab_insight:
         run_clicked = st.button("Classify Inquiries", type="primary", width="stretch")
 
     with right:
-        st.markdown("**Classification result**")
         if run_clicked:
             with st.spinner("Classifying..."):
                 lang_filter = None if lang_choice == "both" else lang_choice
@@ -175,20 +176,51 @@ with tab_insight:
             dist = theme_distribution(result)
             acc = classifier_accuracy(result)
 
-            kpi1, kpi2, kpi3 = st.columns(3)
-            kpi1.metric("Inquiries classified", f"{len(result):,}")
-            kpi2.metric("Themes covered", f"{len(dist)} / {len(THEMES)}")
+            st.markdown("**Key insights**")
+            for ins in key_insights(result):
+                st.markdown(f"- {ins}")
+
+            st.markdown("**Distribution**")
+            kpi1, kpi2 = st.columns([1, 1])
+            kpi1.metric("Classified", f"{len(result):,} inquiries")
             if acc is not None:
-                kpi3.metric("Accuracy vs ground truth", f"{acc*100:.1f}%")
+                kpi2.metric("Accuracy vs ground truth", f"{acc*100:.1f}%")
 
-            chart_df = dist.set_index("theme")[["count"]]
-            st.bar_chart(chart_df, height=240)
-            st.dataframe(dist, width="stretch", hide_index=True)
+            chart_col, table_col = st.columns([2, 1], gap="medium")
+            with chart_col:
+                st.bar_chart(dist.set_index("theme")[["count"]], height=220)
+            with table_col:
+                st.dataframe(
+                    dist.rename(columns={"theme": "Theme", "count": "Count", "share": "Share %"}),
+                    width="stretch",
+                    hide_index=True,
+                )
 
-            st.markdown("**Top quotes + recommended action per theme**")
-            for theme in dist["theme"]:
-                with st.expander(f"{theme}  ·  {int(dist.loc[dist.theme == theme, 'count'].iloc[0])} inquiries"):
-                    st.markdown(f"**Action:** {recommended_action(theme)}")
-                    quotes = top_quotes(result, theme, n=5)
-                    for q in quotes:
+            st.markdown("**Action plan**")
+            action_df = dist.assign(
+                action=dist["theme"].map(ACTIONS_BY_THEME),
+            ).rename(columns={
+                "theme": "Theme", "count": "Count", "share": "Share %", "action": "Recommended action",
+            })
+            st.dataframe(action_df, width="stretch", hide_index=True)
+
+            st.markdown("**Expected impact** (after acting on the plan above)")
+            i1, i2 = st.columns(2)
+            i1.metric(
+                "High-match inquiry rate",
+                f"{EXPECTED_IMPACT['high_match_after_pct']:.0f}%",
+                delta=f"+{EXPECTED_IMPACT['high_match_after_pct'] - EXPECTED_IMPACT['high_match_before_pct']:.0f}pp",
+            )
+            i2.metric(
+                "Triage time / week",
+                f"{EXPECTED_IMPACT['triage_minutes_after']} min",
+                delta=f"-{EXPECTED_IMPACT['triage_hours_before']} h",
+                delta_color="inverse",
+            )
+
+            with st.expander("Evidence — top quotes per theme", expanded=False):
+                for theme in dist["theme"]:
+                    st.markdown(f"**{theme.title()}** — {recommended_action(theme)}")
+                    for q in top_quotes(result, theme, n=4):
                         st.markdown(f"- {q}")
+                    st.markdown("")
