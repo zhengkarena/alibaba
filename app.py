@@ -13,6 +13,9 @@ from pathlib import Path
 import pandas as pd
 import streamlit as st
 
+# Must be the first Streamlit command on the page.
+st.set_page_config(page_title="AI E-commerce Ops Tool", layout="wide")
+
 from llm_client import is_live, status
 import data_loader as dl
 from modules.m1_product_rank import (
@@ -119,9 +122,7 @@ with st.sidebar:
     )
 
 
-# --- Page config + hero --------------------------------------------------------
-
-st.set_page_config(page_title="AI E-commerce Ops Tool", layout="wide")
+# --- Hero ---------------------------------------------------------------------
 
 st.title("AI E-commerce Ops Tool")
 st.markdown(
