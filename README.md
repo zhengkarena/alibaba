@@ -1,3 +1,11 @@
+---
+title: AI 跨境电商运营工具
+sdk: streamlit
+sdk_version: "1.30.0"
+app_file: app_zh.py
+pinned: false
+---
+
 # AI E-commerce Ops Tool
 
 One Streamlit console for cross-border e-commerce operations. Replaces manual product selection, copywriting, customer-inquiry triage, and dashboard monitoring with a single AI-powered workflow.
